@@ -1,0 +1,67 @@
+header{
+
+  z-index: 1;
+  @include position(absolute, 0 0 null 0);
+
+  img.logo-image{
+    
+    height: 100px;
+    margin-top: 32px;
+    margin-left: 32px;
+  }
+  
+  .menu-wrapper{
+    
+    @include position(absolute, 0 0 null null);
+    margin-top: 35px;
+    margin-right: 32px;
+    
+    nav.nav-menu{
+      
+      display: inline-block;
+      float: left;
+      
+      ul.menu-items{
+        
+        li.menu-item{
+          
+          float: left;
+          padding-right: 23px;
+          
+          &.domain-item:last-child, &.aux-item:last-child{
+            padding-left: 48px;
+          }
+        }
+      }
+    }
+    
+    .language-selector{
+      
+      display: inline-block;
+      float: left;
+    }
+    
+    .account-item{
+      display: inline-block;
+
+      float: left;
+      
+      img{
+        
+        height: 30px;
+      }
+    }
+    
+    .search-item{
+
+      display: inline-block;
+      float: left;
+      
+      img{
+        
+        height: 30px;
+      }
+    }
+  }
+
+}
