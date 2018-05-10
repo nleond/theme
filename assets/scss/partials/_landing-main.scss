@@ -47,10 +47,24 @@ body{
               border: none;
               background-color: transparent;
               font-size: 17px;
-              padding-bottom: 15px;
+              font-size: 20px;
+              padding: 0 15px 15px 15px;
               width: 100%;
+              height: 55px;
               line-height: 2.3;
               letter-spacing: .025;
+              color: $main-black;
+              font-weight: 500;
+              
+              &::-moz-selection{
+                color: white;
+                background-color: #BFBFBF;
+              }
+              
+              &::selection{
+                color: white;
+                background-color: #BFBFBF;
+              }
               
               &:focus{
                 
@@ -60,6 +74,7 @@ body{
             
             .domain-pills{
               
+              margin-left: 12px;
               padding-top: 10px;
               width: 100%;
               z-index: 3;
@@ -114,6 +129,8 @@ body{
                 top: 0;
                 right: 0;
                 
+                z-index: 0 !important;
+                
                 margin-right: 12px;
                 margin-top: 13px;
                 font-size: 14px;
@@ -125,9 +142,257 @@ body{
             
             .closable{
               display: none;
+              
+              &.state-open{
+                
+                display: block;
+              }
+              
+              z-index: 1;
               position: absolute;
               left: 0;
-              bottom: -100%;
+              width: 100%;
+              top: 58px;
+              background-color: white;
+              
+              .close-btn{
+                
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-right: 12px;
+                margin-top: 10px;
+                font-size: 14px;
+                color: $main-black;
+                letter-spacing: .05em;
+                line-height: 1.4;
+                
+                &:after{
+                  
+                  content: 'X';
+                }
+              }
+              
+              .search-options{
+                
+                position: relative;
+                margin-top: 50px;
+                padding-left: 25px;
+                padding-right: 25px;
+                
+                label{
+                  
+                  float: left;
+                  width: calc(50% - 50px);
+                  // height: 60px;
+                  font-weight: 500;
+                  font-size: 15px;
+                  color: $main-black;
+                  letter-spacing: .025;
+                  line-height: 1;
+                  margin-left: 25px;
+                  margin-right: 25px;
+                  
+                  .label-content{
+                    
+                    padding-left: 10px;
+                  }
+                  
+                  input{
+                    
+                    padding: 0 10px;
+                    font-weight: 300;
+                    width: 100%;
+                    border: 1px solid #4D4D4D;
+                    background-color: #EBEBEB;
+                    display: block;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -o-appearance: none;
+                    margin-top: 6px;
+                    margin-bottom: 28px;
+                    
+                    height: 38px;
+                    
+                    &:after{
+                      content: 'lens';
+                      display: block;
+                      position: absolute;
+                      right: 0;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      width: 20px;
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+            }
+            
+            .landing-live-search-container{
+              
+              z-index: 5;
+              position: absolute;
+              left: 0;
+              top: 58px;
+              background-color: white;
+              padding: 20px 15px 10px 15px;
+              width: 100%;
+              
+              .landing-live-search-group {
+                
+                &.data {
+                
+                  .results-header{
+                    border-bottom: 2px solid $data-color;
+                    
+                    .results-title{
+                      
+                      color: $data-color;
+                    }
+                  }
+                  
+                  .search-results{
+                    
+                    .result-entry{
+                      
+                      .matched-text{
+                        
+                        color: $data-color;
+                      }
+                    }
+                  }
+                }
+                
+                &.pubs {
+                  
+                  .results-header{
+                    border-bottom: 2px solid $pubs-color;
+                    
+                    .results-title{
+                      
+                      color: $pubs-color;
+                    }
+                  }
+                  
+                  .search-results{
+                    
+                    .result-entry{
+                      
+                      .matched-text{
+                        
+                        color: $pubs-color;
+                      }
+                    }
+                  }
+                }
+                
+                &.lab {
+                  
+                  .results-header{
+                    border-bottom: 2px solid $lab-color;
+                    
+                    .results-title{
+                      
+                      color: $lab-color;
+                    }
+                  }
+                  
+                  .search-results{
+                    
+                    .result-entry{
+                      
+                      .matched-text{
+                        
+                        color: $lab-color;
+                      }
+                    }
+                  }
+                }
+                
+                padding-bottom: 20px;
+                
+                &:last-child{
+                  
+                  padding-bottom: 0;
+                }
+                
+                .results-header{
+                  width: 100%;
+                  position: relative;
+                  height: 15px;
+                  padding-bottom: 4px;
+                  
+                  .results-title{
+                    
+                    padding-left: 4px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    font-weight: 400;
+                    font-size: 13px;
+                    letter-spacing: .005em;
+                    line-height: 1.4;
+                    padding-right: 60px;
+                  }
+                  
+                  .all-link{
+                    
+                    padding-right: 8px;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: inline-block;
+                    font-weight: 400;
+                    font-size: 11px;
+                    color: #898989;
+                    letter-spacing: .025em;
+                    line-height: 1.3;
+                    cursor: pointer;
+                    user-select: none;
+                    
+                    &:hover{
+                      
+                      text-decoration: none;
+                    }
+                  }
+                }
+                  
+                .search-results{
+                  
+                  width: 100%;
+                  
+                  a.result-entry{
+                    
+                    display: block;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    font-weight: 300;
+                    font-size: 16;
+                    color: #898989;
+                    line-height: 2;
+                    border-bottom: 1px solid #989898;
+                    cursor: pointer;
+                    
+                    &:hover{
+                      text-decoration: none;
+                    }
+                    
+                    &:last-child{
+                      
+                      border-bottom: none;
+                    }
+                    
+                    .matched-text{
+                      
+                      font-weight: 700;
+                      font-size: 16px;
+                      line-height: 2;
+                    }
+                  }
+                }  
+              }
             }
           }
           

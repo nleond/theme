@@ -98,32 +98,43 @@
               </div>
             </div>
             
+            <!-- <div class="closable state-open"> -->
             <div class="closable">
               
-              <div class="close">
+              <div class="close-btn">
                 CLOSE
               </div>
 
               <div class="search-options">
-                <label for="input-organizations">ORGANIZATIONS
-                  <select type="select" id="input-organizations" name="input-organizations" value="" placeholder="- SELECT -">
-                  </select>
+                <label for="input-organizations"><span class="label-content">ORGANIZATIONS</span>
+                  <input list="organizations" id="input-organizations" name="input-organizations" value="" placeholder="- SELECT -">
+                  <datalist id="organizations">
+                    <option value=""></option>
+                  </datalist>
                 </label>
-                <label for="input-tags">TAGS
-                  <select type="select" id="input-tags" name="input-tags" value="" placeholder="- SELECT -">
-                  </select>
+                <label for="input-tags"><span class="label-content">TAGS</span>
+                  <input list="tags" id="input-tags" name="input-tags" value="" placeholder="- SELECT -">
+                  <datalist id="tags">
+                    <option value=""></option>
+                  </datalist>
                 </label>
-                <label for="input-licences">LICENCES
-                  <select type="select" id="input-licences" name="input-licences" value="" placeholder="- SELECT -">
-                  </select>
+                <label for="input-licences"><span class="label-content">LICENCES</span>
+                  <input list="licences" id="input-licences" name="input-licences" value="" placeholder="- SELECT -">
+                  <datalist id="licences">
+                    <option value=""></option>
+                  </datalist>
                 </label>
-                <label for="input-topics">TOPICS
-                  <select type="select" id="input-topics" name="input-topics" value="" placeholder="- SELECT -">
-                  </select>
+                <label for="input-topics"><span class="label-content">TOPICS</span>
+                  <input list="topics" id="input-topics" name="input-topics" value="" placeholder="- SELECT -">
+                  <datalist id="topics">
+                    <option value=""></option>
+                  </datalist>
                 </label>
-                <label for="input-formats">FORMATS
-                  <select type="select" id="input-formats" name="input-formats" value="" placeholder="- SELECT -">
-                  </select>
+                <label for="input-formats"><span class="label-content">FORMATS</span>
+                  <input list="formats" id="input-formats" name="input-formats" value="" placeholder="- SELECT -">
+                  <datalist id="formats">
+                    <option value=""></option>
+                  </datalist>
                 </label>
                   
                 </div>
@@ -131,16 +142,71 @@
               </div>
               
               <div class="landing-live-search-container">
-              <div class="landing-live-search-group">
-                <div class="landing-live-search-title">
+              
+                <div class="landing-live-search-group data">
+                  <div class="results-header">
+                    <div class="results-title">
+                      Data
+                    </div>
+                    <a class="all-link">
+                      all Data
+                    </a>
+                  </div>
 
+                  <div class="search-results">
+                    <a href="#" class="result-entry">
+                      <span class="matched-text">Water Po</span>llution Guidelines
+                    </a>
+                    
+                    <a href="#" class="result-entry">
+                      <span class="matched-text">Water Po</span>llution Composition Annual Data 2018
+                    </a>
+                  </div>
                 </div>
+                
+                <div class="landing-live-search-group pubs">
+                  <div class="results-header">
+                    <div class="results-title">
+                      Pubs
+                    </div>
+                    <a class="all-link">
+                      all Pubs
+                    </a>
+                  </div>
 
-                <div class="landing-live-search-results">
+                  <div class="search-results">
+                    <a href="#" class="result-entry">
+                      <span class="matched-text">Water Po</span>llution Guidelines
+                    </a>
+                    
+                    <a href="#" class="result-entry">
+                      <span class="matched-text">Water Po</span>llution Composition Annual Data 2018
+                    </a>
+                  </div>
+                </div>
+                
+                <div class="landing-live-search-group lab">
+                  <div class="results-header">
+                    <div class="results-title">
+                      Pubs
+                    </div>
+                    <a class="all-link">
+                      all Lab
+                    </a>
+                  </div>
 
+                  <div class="search-results">
+                    <a href="#" class="result-entry">
+                      <span class="matched-text">Water Po</span>llution Guidelines
+                    </a>
+                    
+                    <a href="#" class="result-entry">
+                      <span class="matched-text">Water Po</span>llution Composition Annual Data 2018
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+              
             </div>
 
             <button type="button" name="landing-search-button" class="landing-search-button">
