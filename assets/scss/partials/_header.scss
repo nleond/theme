@@ -25,11 +25,53 @@ header{
         
         li.menu-item{
           
+          height: 45px;
+          font-weight: 400;
+          font-size: 20px;
+          color: $main-black;
+          letter-spacing: .005em;
+          line-height: 1.2;
           float: left;
-          padding-right: 23px;
+          padding-left: 15px;
+          padding-right: 15px;
+          // margin-right: 23px;
           
-          &.domain-item:last-child, &.aux-item:last-child{
-            padding-left: 48px;
+          &.active{
+            
+            background-color: $main-black;
+            color: $footer-white;
+          }
+          
+          a{
+            
+            color: inherit;
+            vertical-align: middle;
+            line-height: 43px;
+            
+            &:hover{
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+          
+          
+          &.current-item{
+            
+            a{
+              
+              border-bottom: 2px solid $neutral-grey;
+            }
+          }
+          
+          &.domain-item{
+            
+            &:last-of-type{
+              margin-right: 48px;
+            }
+          }
+          
+          &.aux-item:last-of-type{
+            margin-right: 48px;
           }
         }
       }
@@ -39,16 +81,50 @@ header{
       
       display: inline-block;
       float: left;
+      
+      a{
+        
+        height: 45px;
+        font-weight: 400;
+        font-size: 20px;
+        color: $main-black;
+        letter-spacing: .005em;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        vertical-align: middle;
+        line-height: 43px;
+        
+        &:hover{
+          
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
     }
     
     .account-item{
-      display: inline-block;
 
+      display: inline-block;
       float: left;
       
-      img{
+      a{
         
-        height: 30px;
+        height: 45px;
+        font-weight: 400;
+        font-size: 20px;
+        color: $main-black;
+        letter-spacing: .005em;
+        line-height: 1.2;
+        padding-left: 15px;
+        padding-right: 15px;
+        vertical-align: middle;
+        line-height: 37px;
+      
+        img{
+          
+          height: 30px;
+        }
       }
     }
     
@@ -57,9 +133,25 @@ header{
       display: inline-block;
       float: left;
       
-      img{
+      a{
         
-        height: 30px;
+        // display: block;
+        height: 45px;
+        font-weight: 400;
+        font-size: 20px;
+        color: $main-black;
+        letter-spacing: .005em;
+        line-height: 1.2;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        vertical-align: middle;
+        line-height: 35px;
+        
+        img{
+          height: 28px;
+          width: 28px;
+        }
       }
     }
   }
