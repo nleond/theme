@@ -16,6 +16,12 @@ body{
       background-color: $data-color;
     }
     
+    &.pubs-footer{
+      
+      color: white;
+      background-color: $pubs-color;
+    }
+    
     .footer-content{
       
       width: 100%;

@@ -1,5 +1,10 @@
 body{
   
+  &.pubs{
+    
+    background-color: $pubs-color;
+  }
+  
   section{
     
     div.landing-section{
@@ -416,9 +421,10 @@ body{
     }
   }
   
-  section.data-landing-page-content{
+  section.pubs-landing-page-content{
   
-    margin: 0 15px 55px 15px;
+    margin: 0 15px 0px 15px;
+    background-color: $neutral-grey;
     
     .container-fluid{
       
@@ -437,11 +443,11 @@ body{
         padding-left: 25px;
       }
       
-      &.featured-datasets-container{
+      &.featured-pubs-container{
         
         padding-top: 65px;
         
-        h4.featured-datasets-header{
+        h4.featured-pubs-header{
           
           margin: 0;
           padding-bottom: 18px;
@@ -451,90 +457,86 @@ body{
       }
     }
     
-    .featured-datasets-item{
-      
-      padding: 30px 15px 45px 15px;
-      border-top: solid 10px $data-color;
-      transition: all .2s ease-in-out;
-      -webkit-transition: all .2s ease-in-out;
-      -moz-transition: all .2s ease-in-out;
-      -o-transition: all .1s ease-in-out;
-      
-      &:hover{
+
+
+    div{
+      .featured-pubs-item{
+        padding: 30px 15px 45px 15px;
+        border-top: solid 10px $pubs-color;
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -o-transition: all .1s ease-in-out;
         
-        background-color: white;
-      }
-      
-      .date-of-entry{
-        
-        color: $details-grey;
-        font-weight: 400;
-        font-size: 12;
-        letter-spacing: .05;
-        line-height: 1.3;
-        
-        a{
-          color: inherit;
+        &:hover{
+          
+          background-color: white;
         }
-      }
-      
-      // a{
-      //   color: $main-black;
-      // 
-      //   &:hover{
-      // 
-      //     text-decoration: none;
-      //     color: $main-black;
-      //   }
-      // }
-      
-      h3.featured-dataset-title{
         
-        margin: 0;
-        line-height: 1;
-        padding-top: 18px;
-        font-weight: 500;
-        color: $data-color;
-        
-        a{
+        .date-of-entry{
           
-          color: inherit;
+          color: $details-grey;
+          font-weight: 400;
+          font-size: 12;
+          letter-spacing: .05;
+          line-height: 1.3;
           
-          &:hover{
+          a{
             color: inherit;
           }
         }
+
         
-      }
-      
-      .dataset-service{
-        
-        margin-top: 16px;
-        font-weight: 400400;
-        font-size: 12;
-        color: $details-grey;
-        letter-spacing: .05em;
-        line-height: 1.3;
-        
-        a{
-          color: inherit;
+        h3.featured-pubs-title{
           
-          &:hover{
+          margin: 0;
+          line-height: 1;
+          padding-top: 18px;
+          font-weight: 500;
+          color: $pubs-color;
+          
+          a{
+            
             color: inherit;
+            
+            &:hover{
+              color: inherit;
+            }
+          }
+          
+        }
+        
+        .pubs-service{
+          
+          margin-top: 16px;
+          font-weight: 400400;
+          font-size: 12;
+          color: $details-grey;
+          letter-spacing: .05em;
+          line-height: 1.3;
+          
+          a{
+            color: inherit;
+            
+            &:hover{
+              color: inherit;
+            }
           }
         }
-      }
-      
-      .tag-list{
-        margin-top: 10px;
+        
+        .tag-list{
+          margin-top: 10px;
+        }
       }
     }
     
-    .latest-datasets-container{
+    /* ___SEARCH BY SUBJECT SECTION___ */
+    
+    .search-by-subject-container{
       
       padding-top: 65px;
       
-      h4.latest-datasets-header{
+      h4.search-by-subject-header{
         
         margin: 0;
         padding-bottom: 18px;
@@ -542,128 +544,77 @@ body{
         font-weight: bold;
       }
       
-      div{
+      div.search-by-subject-col{
           
-        .latest-border-bottom{
-          border-top: solid 10px $data-color;
-          // height: 0px;
+        height: 10px;
+        
+        .search-by-subject-border-bottom{
+          border-top: solid 10px $pubs-color;
+          height: 0px;
           position: relative;
           display: block;
           text-align: right;
           margin-bottom: 25px;
-          
-          .latest-datasets-order-by{
-            // position: absolute;
-            // right: 0;
-
-            // top: 0;
-            font-weight: 400;
-            font-size: 12px;
-            color: #262626;
-            letter-spacing: .025em;
-            line-height: 1.4;
-            padding-top: 10px;
-            
-            select{
-              font-weight: 400;
-              font-size: 12px;
-              margin-left: 20px;
-            }
-          }
         }
       }
       
-      div{  
-        .latest-dataset-item{
-          max-width: 1024px;
-          margin: auto;
-          margin-top: -1px;
-          padding: 20px 15px;
-          border-left: solid 10px transparent;
+      div{
+        .subject-item{
+          padding: 0 30px 15px 30px;
+          // border-top: solid 10px $pubs-color;
           transition: all .2s ease-in-out;
           -webkit-transition: all .2s ease-in-out;
           -moz-transition: all .2s ease-in-out;
           -o-transition: all .1s ease-in-out;
-          position: relative;
           
-          &:after{
-            
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            display: block;
-            width: 100%;
-            height: 0;
-            border-bottom: solid 1px $details-grey;
-            transition: all .2s ease-in-out;
-            -webkit-transition: all .2s ease-in-out;
-            -moz-transition: all .2s ease-in-out;
-            -o-transition: all .1s ease-in-out;
-          }
-          
-          &:last-of-type:after{
-            
-            border-bottom: none;
-          }
+          height: 260px;
           
           &:hover{
             
-            background-color: white;
-            border-bottom-color: transparent;
-            border-left-color: $data-color;
-          
-            &:after{
-              
-              border-bottom-color: transparent;
-            }
+            // background-color: white;
           }
           
-          .date-of-entry{
+          .featured-pubs-icon{
             
-            color: $details-grey;
-            font-weight: 400;
-            font-size: 12;
-            letter-spacing: .05;
-            line-height: 1.3;
+            height: 150px;
+            line-height: 150px;
+            color: $pubs-color;
+            text-align: center;
             
-            a{
+            img{
+              width: 50px;
+              vertical-align: middle;
               color: inherit;
             }
           }
+
           
-          // a{
-          //   color: $main-black;
-          // 
-          //   &:hover{
-          // 
-          //     text-decoration: none;
-          //     color: $main-black;
-          //   }
-          // }
-          
-          h3.latest-dataset-title{
+          h3.featured-pubs-title{
             
+            text-align: center;
             margin: 0;
+            
             line-height: 1;
-            padding-top: 8px;
             font-weight: 500;
-            color: $data-color;
+            color: $pubs-color;
             
             a{
               
-              color: inherit;
+              font-weight: 400400;
+              font-size: 25px;
+              color: $main-black;
+              line-height: 1.3;
               
               &:hover{
-                color: inherit;
+                // color: inherit;
               }
             }
             
           }
           
-          .dataset-service{
+          .pubs-service{
             
-            margin-top: 8px;
+            margin-top: 16px;
             font-weight: 400400;
             font-size: 12;
             color: $details-grey;
@@ -682,45 +633,112 @@ body{
           .tag-list{
             margin-top: 10px;
           }
-          
-          .bottom-separator{
-            display: none;
-            width: 100%;
-            height: 0;
-            border-bottom: solid 1px $details-grey;
-          } 
         }
+      }
+      
+    } /*SEARCH BY SUBJECT CONTAINER */
+    
+    /* ___EXPLORE SECTION___ */
+    .explore-container{
+      
+      padding-top: 65px;
+      padding-bottom: 55px;
+      
+      h4.explore-header{
         
-        .latest-dataset-more-pill{
-          
-          max-width: 1024px;
-          margin: auto;
+        margin: 0;
+        padding-bottom: 18px;
+        padding-left: 7px;
+        font-weight: bold;
+      }
+      
+      div.explore-col{
+        
+        height: 10px;
+        
+        .explore-border-bottom{
+          border-top: solid 10px $pubs-color;
+          height: 0px;
+          position: relative;
           display: block;
-          width: 100%;
-          height: 58px;
-          margin-top: 55px;
-          border-radius: 29px;
-          color: white;
-          background-color: $data-color;
+          text-align: right;
+          margin-bottom: 25px;
+        }
+      }
+      
+      div{
+        .explore-item{
+          padding: 0 30px 15px 30px;
+          // border-top: solid 10px $pubs-color;
+          transition: all .2s ease-in-out;
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -o-transition: all .1s ease-in-out;
           
-          a{
-            color: inherit;
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            line-height: 58px;
-            vertical-align: middle;
-            text-decoration: none;
+          height: 280px;
+          
+          &:hover{
             
+            // background-color: white;
+          }
+          
+          .featured-pubs-icon{
+            
+            height: 120px;
+            line-height: 120px;
+            color: $pubs-color;
+            text-align: center;
+            position: relative;
+            
+            img{
+              position: relative;
+              width: 50px;
+              vertical-align: middle;
+              color: inherit;
+              top: 10px;
+            }
+          }
+          
+          
+          h3.featured-pubs-title{
+            
+            text-align: center;
+            margin: 0;
+            
+            line-height: 1;
             font-weight: 500;
-            font-size: 20px;
-            color: white;
-            letter-spacing: .05em;
+            color: $pubs-color;
+            min-height: 70px;
+            
+            a{
+              
+              font-weight: 400400;
+              font-size: 25px;
+              color: $main-black;
+              line-height: 1.3;
+              
+              &:hover{
+                // color: inherit;
+              }
+            }
+            
+          }
+            
+          .explore-description{
+            
+            text-align: center;
+            margin-top: 20px;
+            
+            font-weight: 300;
+            font-size: 15px;
+            color: $main-black;
+            line-height: 1.4;
           }
         }
       }
-    }
+      
+    } /*SEARCH BY SUBJECT CONTAINER */
+    
   }
 }
 
