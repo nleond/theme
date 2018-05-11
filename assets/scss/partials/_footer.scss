@@ -10,6 +10,12 @@ body{
       background-color: $main-black;
     }
     
+    &.data-footer{
+      
+      color: white;
+      background-color: $data-color;
+    }
+    
     .footer-content{
       
       width: 100%;
