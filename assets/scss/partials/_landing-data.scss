@@ -566,7 +566,7 @@ body{
             // top: 0;
             font-weight: 400;
             font-size: 12px;
-            color: #262626;
+            color: $data-color;
             letter-spacing: .025em;
             line-height: 1.4;
             padding-top: 10px;
@@ -580,7 +580,7 @@ body{
         }
       }
       
-      div{  
+      div{
         .latest-dataset-item{
           max-width: 1024px;
           margin: auto;
