@@ -132,25 +132,32 @@ header{
 
       display: inline-block;
       float: left;
+      position: relative;
+      top: 5px;
       
       a{
         
         // display: block;
         height: 45px;
+        border-radius: 50%;
         font-weight: 400;
-        font-size: 20px;
-        color: $main-black;
+        font-size: 15px;
+        text-align: center;
+        background-color: $main-black;
+        color: white;
         letter-spacing: .005em;
-        line-height: 1.2;
+        // line-height: 1.2;
         float: left;
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
         vertical-align: middle;
         line-height: 35px;
+        height: 31px;
+        width: 31px;
+        line-height: 30px;
+        
         
         img{
-          height: 28px;
-          width: 28px;
         }
       }
     }

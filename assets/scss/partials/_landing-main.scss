@@ -8,7 +8,7 @@ body{
       height: 80vh;
       min-height: 600px;
       background-image: url('../images/jpg/photo1-100.jpg');
-      background-size: cover;
+      background-size: cofver;
       background-repeat: no-repeat;
       background-position: -1px 51%;
       position: relative;
@@ -141,7 +141,7 @@ body{
             }
             
             .closable{
-              display: none;
+              display: block;
               
               &.state-open{
                 
@@ -192,6 +192,7 @@ body{
                   line-height: 1;
                   margin-left: 25px;
                   margin-right: 25px;
+                  position: relative;
                   
                   .label-content{
                     
@@ -214,16 +215,37 @@ body{
                     margin-bottom: 28px;
                     
                     height: 38px;
+                    // 
+                    // &:after{
+                    //   content: 'lens';
+                    //   display: block;
+                    //   position: absolute;
+                    //   right: 0;
+                    //   top: 50%;
+                    //   transform: translateY(-50%);
+                    //   width: 20px;
+                    //   height: 100%;
+                    // }
+                  }
+                  
+                  a{
                     
-                    &:after{
-                      content: 'lens';
-                      display: block;
-                      position: absolute;
-                      right: 0;
-                      top: 50%;
-                      transform: translateY(-50%);
-                      width: 20px;
-                      height: 100%;
+                    display: inline-block;
+                    width:36px;
+                    height: 36px;
+                    position: absolute;
+                    top: 22px;
+                    right: 0;
+                    background-color: transparent;
+                    color: $main-black;
+                    text-align: center;
+                    
+                    i{
+                      
+                      display: inline-block;
+                      color: $main-black;
+                      line-height: 36px;
+                      vertical-align: middle;
                     }
                   }
                 }
@@ -232,6 +254,7 @@ body{
             
             .landing-live-search-container{
               
+              display: none;
               z-index: 5;
               position: absolute;
               left: 0;
