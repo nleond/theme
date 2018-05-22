@@ -1,30 +1,81 @@
 body{
   
-  &.results-main{
+  &.results-main, &.home{
     
-    header .menu-wrapper nav.nav-menu ul.menu-items li.menu-item.current-item a{
-      border-color: $details-grey;
+    header .menu-wrapper nav.nav-menu ul.menu-items{
+    
+      li.menu-item.current-item a{
+        border-color: $details-grey;
+      }
+      
+      li.menu-item.active{
+        background-color: $main-black;
+      }
+      
+      li.menu-item ul.sub-menu li{
+        
+        background-color: $main-black;
+      }
     }
   }
   
-  &.results-data{
+  &.results-data, &.data{
     
-    header .menu-wrapper nav.nav-menu ul.menu-items li.menu-item.current-item a{
-      border-color: $data-color;
+    header .menu-wrapper nav.nav-menu ul.menu-items{
+    
+      li.menu-item.current-item a{
+        border-color: $data-color;
+      }
+      
+      li.menu-item.active, {
+        background-color: $data-color;
+      }
+      
+      
+      li.menu-item ul.sub-menu li{
+        
+        background-color: $data-color;
+      }
     }
   }
   
-  &.results-pubs{
+  &.results-pubs, &.pubs{
     
-    header .menu-wrapper nav.nav-menu ul.menu-items li.menu-item.current-item a{
-      border-color: $pubs-color;
+    header .menu-wrapper nav.nav-menu ul.menu-items{
+    
+      li.menu-item.current-item a{
+        border-color: $pubs-color;
+      }
+      
+      li.menu-item.active{
+        background-color: $pubs-color;
+      }
+      
+      
+      li.menu-item ul.sub-menu li{
+        
+        background-color: $pubs-color;
+      }
     }
   }
   
-  &.results-lab{
+  &.results-lab, &.lab{
     
-    header .menu-wrapper nav.nav-menu ul.menu-items li.menu-item.current-item a{
-      border-color: $lab-color;
+    header .menu-wrapper nav.nav-menu ul.menu-items{
+    
+      li.menu-item.current-item a{
+        border-color: $lab-color;
+      }
+      
+      li.menu-item.active{
+        background-color: $lab-color;
+      }
+      
+      
+      li.menu-item ul.sub-menu li{
+        
+        background-color: $lab-color;
+      }
     }
   }
   
@@ -64,6 +115,7 @@ body{
             float: left;
             padding-left: 15px;
             padding-right: 15px;
+            position: relative;
             // margin-right: 23px;
             
             &.active{
@@ -91,6 +143,30 @@ body{
               }
             }
             
+            ul.sub-menu{
+              
+              display: block;
+              position: absolute;
+              padding: 0;
+              top: 45px;
+              right: 0;
+              line-height: 18px;
+              
+              li{
+            
+                padding-top: 11px;
+                padding-bottom: 11px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-top: 1px;
+                
+                a{
+                  
+                  vertical-align: middle;
+                  line-height: 1.2;
+                }
+              }
+            }
             
             &.current-item{
               

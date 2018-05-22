@@ -40,6 +40,11 @@ body{
       
       border-top-color: $data-color;
     }
+    
+    footer#footer.main-footer{
+    
+      background-color: $data-color;
+    }
   }
   
   &.results-pubs{
@@ -73,6 +78,11 @@ body{
       
       border-top-color: $pubs-color;
     }
+    
+    footer#footer.main-footer{
+    
+      background-color: $pubs-color;
+    }
   }
   
   &.results-lab{
@@ -105,6 +115,11 @@ body{
     section.main-results-page-content .results-main-content section.results-main-result-set .main-results-border-bottom{
       
       border-top-color: $lab-color;
+    }
+    
+    footer#footer.main-footer{
+    
+      background-color: $lab-color;
     }
   }
   
@@ -555,7 +570,17 @@ body{
               width: 50px;
               transform: translateY(-50%);
               right: 0;
+              opacity: 1;
               
+              transition: all .2s ease-in-out;
+              -webkit-transition: all .2s ease-in-out;
+              -moz-transition: all .2s ease-in-out;
+              -o-transition: all .2s ease-in-out;
+              
+              &:hover{
+                
+                opacity: .5;
+              }
             }
           }  
         }

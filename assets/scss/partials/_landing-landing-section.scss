@@ -9,7 +9,6 @@ body{
         background: white url('../images/jpg/photo1-100.jpg') center/cover no-repeat;
         &:after{
 
-          
         }
       }
     }
@@ -24,7 +23,15 @@ body{
         background: white url('../images/jpg/photo2-100.jpg') center/cover no-repeat;
         &:after{
 
+        }
+        
+        .search-form-wrapper .landing-search-form .main-form-content{
           
+          border-bottom-color: $data-color;
+        }
+        
+        .search-form-wrapper .landing-search-form button.landing-search-button{
+          background-color: $data-color;
         }
       }
     }
@@ -39,6 +46,15 @@ body{
         background: white url('../images/jpg/photo3-100.jpg') center/cover no-repeat;
         &:after{
 
+        }
+        
+        .search-form-wrapper .landing-search-form .main-form-content{
+          
+          border-bottom-color: $pubs-color;
+        }
+        
+        .search-form-wrapper .landing-search-form button.landing-search-button{
+          background-color: $pubs-color;
         }
       }
     }
@@ -56,6 +72,15 @@ body{
         background: white url('../images/jpg/photo4-100.jpg') center/cover no-repeat;
         &:after{
 
+        }
+        
+        .search-form-wrapper .landing-search-form .main-form-content{
+          
+          border-bottom-color: $lab-color;
+        }
+        
+        .search-form-wrapper .landing-search-form button.landing-search-button{
+          background-color: $lab-color;
         }
       }
     }
@@ -111,7 +136,8 @@ body{
           .main-form-content{
             
             width: calc(100% - 175px); 
-            border-bottom: solid 3px black;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
             position: relative;
             
             input.landing-search-text{
