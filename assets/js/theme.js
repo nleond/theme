@@ -69,6 +69,17 @@ var MainModule = (function($){
       })
     }
   }
+
+  var classifySubmenus = function(){
+    
+    $('li.menu-item').each(function(){
+      
+      if( $(this).find('ul.sub-menu').size() ){
+        
+        $(this).addClass('has-sub-menu')
+      }
+    })
+  }
   
   
   return{
@@ -76,7 +87,8 @@ var MainModule = (function($){
     menuHover:menuHover,
     switchAdvancedSearch:switchAdvancedSearch,
     closeAdvancedSearch:closeAdvancedSearch,
-    redirectToResultsPage:redirectToResultsPage
+    redirectToResultsPage:redirectToResultsPage,
+    classifySubmenus:classifySubmenus
   }
   
 })(jQuery)
@@ -85,6 +97,18 @@ var MainModule = (function($){
 jQuery('input.landing-search-text').keyup(function(){
   
   MainModule.extendLiveResults()
+})
+
+jQuery('input.landing-search-text').focusout(function(){
+  
+  $('.landing-live-search-container').removeClass('visible')
+})
+
+jQuery('input.landing-search-text').focusin(function(){
+  if($(this).val() !== ''){
+    
+    $('.landing-live-search-container').addClass('visible')
+  }
 })
 
 jQuery('.advanced-search-link').click(function(){
@@ -101,6 +125,14 @@ jQuery('.closable .close-btn').click(function(){
   jQuery('.domain-pills').removeClass('short')
 })
 
+jQuery('.filter-pill').click(function(){
+  
+  $(this).toggleClass('selected')
+})
+
 jQuery(document).ready(function(){
   MainModule.redirectToResultsPage()
+  MainModule.classifySubmenus()
 })
+
+

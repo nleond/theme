@@ -8,7 +8,7 @@ body{
         border-color: $details-grey;
       }
       
-      li.menu-item.active{
+      li.menu-item.has-sub-menu:hover{
         background-color: $main-black;
       }
       
@@ -27,7 +27,7 @@ body{
         border-color: $data-color;
       }
       
-      li.menu-item.active, {
+      li.menu-item.has-sub-menu:hover, {
         background-color: $data-color;
       }
       
@@ -47,7 +47,7 @@ body{
         border-color: $pubs-color;
       }
       
-      li.menu-item.active{
+      li.menu-item.has-sub-menu:hover{
         background-color: $pubs-color;
       }
       
@@ -67,7 +67,7 @@ body{
         border-color: $lab-color;
       }
       
-      li.menu-item.active{
+      li.menu-item.has-sub-menu:hover{
         background-color: $lab-color;
       }
       
@@ -118,10 +118,25 @@ body{
             position: relative;
             // margin-right: 23px;
             
-            &.active{
+            &.has-sub-menu{
               
-              background-color: $main-black;
-              color: $footer-white;
+              background-color: transparent;
+              
+              transition: all .2s ease-in-out;
+              -webkit-transition: all .2s ease-in-out;
+              -moz-transition: all .2s ease-in-out;
+              -o-transition: all .2s ease-in-out;
+              
+              &:hover{
+                
+                background-color: $main-black;
+                color: $footer-white;
+              }
+              
+              &:hover ul.sub-menu{
+                
+                display: block;
+              }
             }
             
             a{
@@ -145,7 +160,7 @@ body{
             
             ul.sub-menu{
               
-              display: block;
+              display: none;
               position: absolute;
               padding: 0;
               top: 45px;
