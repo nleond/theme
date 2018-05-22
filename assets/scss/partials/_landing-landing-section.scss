@@ -190,6 +190,11 @@ body{
             
             .domain-pills{
               
+              &.short{
+                
+                width: 250px;
+              }
+              
               margin-left: 12px;
               padding-top: 10px;
               width: 100%;
@@ -269,6 +274,11 @@ body{
               
               .advanced-search-link{
                 
+                &.hidden{
+                  
+                  display: none;
+                }
+                
                 cursor: pointer;
                 user-select: none;
                 position: absolute;
@@ -298,9 +308,9 @@ body{
             }
             
             .closable{
-              display: block;
+              display: none;
               
-              &.state-open{
+              &.visible{
                 
                 display: block;
               }
@@ -323,6 +333,7 @@ body{
                 color: $main-black;
                 letter-spacing: .05em;
                 line-height: 1.4;
+                cursor: pointer;
                 
                 transition: all .2s ease-in-out;
                 -webkit-transition: all .2s ease-in-out;
@@ -430,6 +441,12 @@ body{
             }
             
             .landing-live-search-container{
+              
+              
+              &.visible{
+                
+                display: block;
+              }
               
               display: none;
               z-index: 5;
