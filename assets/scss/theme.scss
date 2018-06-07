@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import 'partials/fonts';
 
-@import "../../bower_components/bourbon/core/bourbon";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/bourbon/core/bourbon";
 
 @import 'partials/variables';
 @import 'partials/reset';

@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
 	var npmDependencies = require('./package.json').devDependencies;
 
@@ -6,90 +6,26 @@ module.exports = function(grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
-		// Watches for changes and runs tasks
-		watch : {
-			sass : {
-				files : ['assets/scss/**/*.scss'],
-				tasks : ['sass', 'cssmin'],
-				options : {
-					livereload : true
-				}
+		// Copy fonts
+		copy: {
+			options: {
+				mode: '0644',
 			},
-			js : {
-				files : ['assets/js/theme.js'],
-				tasks : ['jshint', 'uglify'],
-				options : {
-					livereload : true
-				}
+			'font-awesome': {
+				expand: true,
+				filter: 'isFile',
+				cwd: 'node_modules/font-awesome/fonts/',
+				src: ['**/*'],
+				dest: 'assets/fonts/',
 			},
-			php : {
-				files : ['**/*.php'],
-				options : {
-					livereload : true
-				}
-			}
 		},
 
-		// concat and minify our JS
-		uglify: {
-			dist: {
-				files: {
-					'assets/js/vendors.min.js': [
-						'bower_components/fastclick/lib/fastclick.js',
-					],
-					'assets/js/theme.min.js': [
-						'assets/js/theme.js',
-						'node_modules/bootstrap/dist/js/bootstrap.min.js',
-					]
-				}
-			}
-		},
-
-		// compile your sass
-		sass: {
-			dev: {
-				options: {
-					style: 'expanded',
-					livereload : true,
-					sourcemap: true
-				},
-				files: {
-					'assets/css/theme.css': [
-						'assets/scss/theme.scss'
-					]
-				}
-			}
-		},
-
-		cssmin: {
-			target: {
-				files: {
-					'assets/css/theme.min.css': [
-						'assets/css/bootstrap.min.css',
-						'assets/css/bootstrap.min.css.map',
-						'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css',
-						'assets/css/theme.css'
-					]
-				},
-			},
-			my_target: {
-				files: {
-					'assets/css/theme.css': [
-						'assets/css/bootstrap.min.css',
-						'assets/css/bootstrap.min.css.map',
-						'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css',
-						'assets/css/theme.css'
-					]
-				},
-			}
-		},
-
-		// JsHint your javascript
-		jshint : {
-			all : [
+		// JsHint rules
+		jshint: {
+			all: [
 				'assets/js/theme.js'
 			],
-			options : {
+			options: {
 				asi: true,
 				browser: true,
 				curly: false,
@@ -106,6 +42,65 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Concat and minify JS
+		uglify: {
+			dist: {
+				files: {
+					'assets/js/vendors.min.js': [
+						'node_modules/fastclick/lib/fastclick.js',
+					],
+					'assets/js/theme.min.js': [
+						'node_modules/bootstrap/dist/js/bootstrap.min.js',
+						'assets/js/theme.js',
+					]
+				}
+			}
+		},
+
+		// Compile Sass and minify CSS
+		sass: {
+			dev: {
+				options: {
+					style: 'expanded',
+					livereload: true,
+					sourcemap: true
+				},
+				files: {
+					'assets/css/theme.css': [
+						'assets/scss/theme.scss'
+					]
+				}
+			}
+		},
+
+		cssmin: {
+			target: {
+				files: {
+					'assets/css/theme.min.css': [
+						'assets/css/theme.css'
+					]
+				},
+			},
+		},
+
+		// Watches for changes and runs tasks
+		watch: {
+			sass: {
+				files: ['assets/scss/**/*.scss'],
+				tasks: ['sass', 'cssmin'],
+				options: {
+					livereload: true
+				}
+			},
+			js: {
+				files: ['assets/js/theme.js'],
+				tasks: ['jshint', 'uglify'],
+				options: {
+					livereload: true
+				}
+			},
+		},
+
 	});
 
 	// Load NPM's via matchdep
@@ -116,6 +111,7 @@ module.exports = function(grunt) {
 
 	// Build task
 	grunt.registerTask('build', [
+		'copy',
 		'jshint',
 		'sass',
 		'cssmin',
