@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
 	var npmDependencies = require('./package.json').devDependencies;
 
@@ -7,25 +7,25 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		// Watches for changes and runs tasks
-		watch : {
-			sass : {
-				files : ['assets/scss/**/*.scss'],
-				tasks : ['sass', 'cssmin'],
-				options : {
-					livereload : true
+		watch: {
+			sass: {
+				files: ['assets/scss/**/*.scss'],
+				tasks: ['sass', 'cssmin'],
+				options: {
+					livereload: true
 				}
 			},
-			js : {
-				files : ['assets/js/theme.js'],
-				tasks : ['jshint', 'uglify'],
-				options : {
-					livereload : true
+			js: {
+				files: ['assets/js/theme.js'],
+				tasks: ['jshint', 'uglify'],
+				options: {
+					livereload: true
 				}
 			},
-			php : {
-				files : ['**/*.php'],
-				options : {
-					livereload : true
+			php: {
+				files: ['**/*.php'],
+				options: {
+					livereload: true
 				}
 			}
 		},
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'assets/js/vendors.min.js': [
-						'bower_components/fastclick/lib/fastclick.js',
+						'node_modules/fastclick/lib/fastclick.js',
 					],
 					'assets/js/theme.min.js': [
 						'assets/js/theme.js',
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					style: 'expanded',
-					livereload : true,
+					livereload: true,
 					sourcemap: true
 				},
 				files: {
@@ -85,11 +85,11 @@ module.exports = function(grunt) {
 		},
 
 		// JsHint your javascript
-		jshint : {
-			all : [
+		jshint: {
+			all: [
 				'assets/js/theme.js'
 			],
-			options : {
+			options: {
 				asi: true,
 				browser: true,
 				curly: false,
