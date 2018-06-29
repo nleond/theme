@@ -81,7 +81,18 @@ module.exports = function (grunt) {
 						'assets/css/theme.css'
 					]
 				},
+			},
+			helix_target: {
+				files: {
+					'../extensions/ckanext-helixtheme/ckanext/helixtheme/public/css/theme.css': [
+						'assets/css/bootstrap.min.css',
+						'assets/css/bootstrap.min.css.map',
+						'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css',
+						'assets/css/theme.css'
+					]
+				},
 			}
+			
 		},
 
 		// JsHint your javascript
