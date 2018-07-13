@@ -2,12 +2,35 @@ body{
   
   &.data{
     
-    background-color: $data-color;
+    background-color: $neutral-grey;
+    .datasets-order-by{
+            font-weight: 400;
+            font-size: 12px;
+            color: $main-black;
+            letter-spacing: .025em;
+            line-height: 1.4;
+            padding-top: 10px;
+            
+            select{
+              font-weight: 400;
+              font-size: 12px;
+              margin-left: 20px;
+              background-color: #ffffff;
+              border-radius: 5px;
+            }
+            &:after{
+                content: '';
+            }
+   }
+    
+    
   }
   
   section.data-landing-page-content{
   
-    margin: 0 15px 55px 15px;
+    //margin: 0 15px 55px 15px;  /*  for vieport-border change  */
+    border-left: 18px solid $data-color;
+    border-right: 18px solid $data-color;
     padding-bottom: 55px;
     background-color: $neutral-grey;
     
@@ -101,7 +124,7 @@ body{
       .dataset-service{
         
         margin-top: 16px;
-        font-weight: 400400;
+        font-weight: 400;
         font-size: 12;
         color: $details-grey;
         letter-spacing: .05em;
@@ -143,24 +166,7 @@ body{
           text-align: right;
           margin-bottom: 25px;
           
-          .latest-datasets-order-by{
-            // position: absolute;
-            // right: 0;
-
-            // top: 0;
-            font-weight: 400;
-            font-size: 12px;
-            color: $main-black;
-            letter-spacing: .025em;
-            line-height: 1.4;
-            padding-top: 10px;
-            
-            select{
-              font-weight: 400;
-              font-size: 12px;
-              margin-left: 20px;
-            }
-          }
+          
         }
       }
       
@@ -313,6 +319,8 @@ body{
       }
     }
   }
+  
+  
 }
 
 
