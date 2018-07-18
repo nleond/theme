@@ -15,8 +15,9 @@ body{
               font-weight: 400;
               font-size: 12px;
               margin-left: 20px;
-              background-color: #ffffff;
+              background-color: $neutral-grey;
               border-radius: 5px;
+              color: #585858;
             }
             &:after{
                 content: '';
