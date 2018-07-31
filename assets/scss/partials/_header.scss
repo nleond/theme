@@ -232,7 +232,8 @@ body{
         float: left;
         
         a{
-          
+          padding:0;
+          display:block;
           height: 45px;
           font-weight: 400;
           font-size: 1.8rem;
@@ -244,52 +245,42 @@ body{
           vertical-align: middle;
           line-height: 50px;
           
-          transition: all .2s ease-in-out;
-          -webkit-transition: all .2s ease-in-out;
-          -moz-transition: all .2s ease-in-out;
-          -o-transition: all .2s ease-in-out;
+          
           
           &:hover{
-            
             text-decoration: none;
             cursor: pointer;
-            
-            
           }
         }
         ul{
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            box-shadow: none;
-            display: none;
-            opacity: 0;
-            visibility: hidden;
-            -webkit-transiton: opacity 0.2s;
-            -moz-transition: opacity 0.2s;
-            -ms-transition: opacity 0.2s;
-            -o-transition: opacity 0.2s;
-            -transition: opacity 0.2s;
+          display:none;
+          list-style:none;
+          position:relative;
+          margin:0;
+          padding: 0;
+          
             
             li{
+                position:relative;
                 background: #fff;
                 width: 100%;
-                //width: auto;
-                //max-width: 100%;
-                display: inline;
                 
+                float:none;
                 a {
-                    padding-top: 35px;
-                    span {&:hover{ opacity:0.5} }
+                  span {&:hover{ opacity:0.7} }
                 }
             }
         }
         
+        &:hover {
+          background: $data-color;
+          a{  color: #fff;}
+        }
         &:hover > ul{
             display: block;
-            opacity: 1;
-            visibility: visible;
+            li{
+            color: #fff;
+            }
         }
         
       }
@@ -300,12 +291,14 @@ body{
 
         display: inline-block;
         float: left;
+        margin-right:14px;
+        margin-left:2px;
         
         a{
           
           height: 45px;
           font-weight: 400;
-          font-size: 2rem;
+          font-size: 1.4rem;
           color: $main-black;
           letter-spacing: .005em;
           line-height: 1.2;
@@ -313,17 +306,15 @@ body{
           //padding-right: 15px;
           vertical-align: middle;
           line-height: 42px;
-          margin-right:24px;
-          margin-left:12px;
+          //margin-right:24px;
+          //margin-left:12px;
         
           transition: all .2s ease-in-out;
           -webkit-transition: all .2s ease-in-out;
           -moz-transition: all .2s ease-in-out;
           -o-transition: all .2s ease-in-out;
         
-          &:hover{
-            opacity: .5;
-          }
+         
         
           img{
             
@@ -332,33 +323,48 @@ body{
           
          }
          ul{
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            position: absolute;
-            box-shadow: none;
-            display: none;
-            opacity: 0;
-            visibility: hidden;
+          display:none;
+          list-style:none;
+          position:absolute;
+          margin:0;
+          padding: 0 4px 0 0;
+          overflow-x: auto;
             -webkit-transiton: opacity 0.2s;
             -moz-transition: opacity 0.2s;
             -ms-transition: opacity 0.2s;
             -o-transition: opacity 0.2s;
             -transition: opacity 0.2s;
             
-            li{ 
-               list-style-type:none;
-              }
-         }
-         &:hover > ul{
+            li{
+                position:relative;
+                background:$data-color;
+                float:none;
+                border-bottom: 1px solid #ebebeb8a;
+                a {
+                    padding: 0 10px 0 10px;
+                    span {&:hover{ opacity:0.7} }
+                }
+            }
+        }
+        &:hover {
+          background: $data-color;
+        }
+        &:hover > ul{
+            left:auto;
+            right:45px;
             display: block;
-            opacity: 1;
-            visibility: visible;
-         }
+            li > a {color:#fff;}
+        }
          .account-icon{
             //background-color: white;
+            padding-left:10px;
+            padding-right:10px;
             border-radius: 50px;
          }
+        
+        &.logged-off{
+          .account-icon{opacity:0.5;}
+        } 
       }
       .search-item{
 
