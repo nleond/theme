@@ -12,12 +12,12 @@ body{
             padding-top: 14px;
             
             select{
-              font-weight: 500;
+              font-weight: 400;
               font-size: 1.4rem;
-              margin-left: 20px;
+              margin-left: 15px;
               background-color: $neutral-grey;
               border-radius: 5px;
-              color: #585858;
+              color: #000;
             }
             &:after{
                 content: '';
@@ -30,8 +30,8 @@ body{
   section.data-landing-page-content{
   
     //margin: 0 15px 55px 15px;  /*  for vieport-border change  */
-    border-left: 18px solid $data-color;
-    border-right: 18px solid $data-color;
+    border-left: 15px solid $data-color;
+    border-right: 15px solid $data-color;
     padding-bottom: 55px;
     background-color: $neutral-grey;
     
@@ -165,7 +165,7 @@ body{
           position: relative;
           display: block;
           text-align: right;
-          margin-bottom: 25px;
+          margin-bottom: 40px;
           
           
         }

@@ -101,7 +101,7 @@ body{
     
     img.logo-image{
       
-      height: 103px;
+      height: 100px;
       margin-top: 50px;
       margin-left: 50px;
     }
@@ -348,6 +348,9 @@ body{
         }
         &:hover {
           background: $data-color;
+          .account-icon{
+            filter:contrast(1000%) invert(100%);
+          }
         }
         &:hover > ul{
             left:auto;
@@ -357,8 +360,8 @@ body{
         }
          .account-icon{
             //background-color: white;
-            padding-left:10px;
-            padding-right:10px;
+            margin-left:10px;
+            margin-right:10px;
             border-radius: 50px;
          }
         

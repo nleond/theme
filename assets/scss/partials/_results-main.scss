@@ -16,7 +16,7 @@ body{
     section.main-results-page-content .results-main-content section.results-main-sidebar .search-form-wrapper .landing-search-form{
       
       .main-form-content{
-      
+        
         border-bottom-color: $data-color;
         
         .domain-pills{
@@ -127,7 +127,7 @@ body{
     
     background-color: $neutral-grey;
     //margin: 17px 17px 0 17px;
-    border: 18px solid $data-color;
+    border: 15px solid $data-color;
     position: relative;
       
     .results-main-content{
@@ -137,7 +137,7 @@ body{
       max-width: 1024px;
       margin: auto;
       padding-top: 200px;
-      min-height: 2350px;
+      min-height: 1550px;
       
       section.results-main-sidebar{
         
@@ -147,9 +147,9 @@ body{
         position: absolute;
         top: 0;
         left: 0;
-        margin-top: 200px;
+        margin-top: 202px;
         z-index: 2;
-        
+
         .search-form-wrapper{
           
           position: relative;
@@ -158,12 +158,7 @@ body{
           margin: auto;
           width: 100%;
               
-          // transform: translate(-50%, -50%);
-          // -webkit-transform: translate(-50%, -50%);
-          // -o-transform: translate(-50%, -50%);
-          // -moz-transform: translate(-50%, -50%);
-          // -ms-transform: translate(-50%, -50%);
-          // 
+          
           
           .landing-search-form{
             
@@ -174,6 +169,7 @@ body{
               border-bottom: solid 3px black;
               position: relative;
               
+
               input.landing-search-text{
                 
                 border: none;
@@ -190,6 +186,7 @@ body{
                 outline: none;
                 padding-left: 8px;
 
+
                 &::-moz-selection{
                   color: white;
                   background-color: #BFBFBF;
@@ -204,6 +201,7 @@ body{
                   
                   border: none;
                 }
+                
               }
               
               .domain-pills{
@@ -626,8 +624,9 @@ body{
           }
         }
         .main-results-advanced-search{
-          
-          
+
+            margin-top: 80px;
+
           h4.header{
             
             margin: 0;
@@ -726,9 +725,12 @@ body{
             margin-bottom: 20px;
             margin-top: 20px;
             border-bottom: 10px solid $data-color;
-            
+
             &.grayed{
                 background-color: #ebebeb;
+            }
+            &.neutral{
+                background-color: $neutral-grey;
             }
             &.org-heading{
                 margin-top:0px;
@@ -879,7 +881,7 @@ body{
           }
           .page_primary_action{
             .btn-group{
-                margin-top:-4px;
+                margin-top:-90px;
             }
             .btn-add-dataset{
                 font-family: 'Roboto';
@@ -901,6 +903,21 @@ body{
             top: 0;
             right: 0;
             
+            ul {
+              li{
+                display: inline;
+                &.current-item{
+                  a{
+                    position: relative;
+                    top: 1px;
+                    font-weight: 500;
+                    font-size: 17px;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+
             .pagination-item{
               
               margin: 0 10px;
@@ -921,24 +938,6 @@ body{
                 opacity: .5;
               }
               
-              &:first-child{
-                
-                margin-left: 0;
-              }
-              
-              &:last-child{
-                
-                margin-right: 0;
-              }
-              
-              &.current-item{
-                
-                position: relative;
-                top: 1px;
-                font-weight: 500;
-                font-size: 17px;
-                text-decoration: none;
-              }
             }
           }
         }
@@ -966,10 +965,11 @@ body{
             padding-top: 10px;
             
             select{
-              font-weight: 500;
+              font-weight: 400;
               font-size: 1.2rem;
               margin-left: 20px;
               padding: 0;
+              color: #000;
             }
           }
         }
@@ -1022,7 +1022,8 @@ body{
               .title{
                 
                 color: $data-color;
-                
+                width: 80%; //to avoid overlapping with favorite/save buttons
+
                 .pill{
                   background-color: $data-color;
                 }
@@ -1181,7 +1182,11 @@ body{
             .tags-list{
               margin-top: 7px;
               padding: 0px !important;
-              
+              .tooltip{
+                overflow:visible !important;
+                position:fixed;
+              }
+
               .tag-box-other{
                 background-color: $details-lighter-grey;
                 color: $details-darker-grey;
@@ -1203,17 +1208,28 @@ body{
                 padding-right:11px;
                 display:none;
                 &:hover{
-                  opacity: .5;
+                  img{
+                    opacity: .6;
+                  }
                 }
+                
             }
             .btn-save{
                 float:right;
                 margin-top:16px;
                 padding-right:17px;
                 display:none;
+                
                 &:hover{
-                  opacity: .7;
-                }
+                  img{
+                    opacity: .6;
+                  }
+                } 
+            }
+            .notes{
+              width:80%;   //to avoid overlapping with save/favorite buttons
+              font-weight:400;
+              margin-top:8px;
             }
             .bottom-separator{
               display: none;
@@ -1337,8 +1353,8 @@ body{
                   color: $data-color;
                   font-weight:400;
                 }
-                .section-title{
-
+                &.edit{
+                  display:inline-block;
                 }
           }
           .package-private{
@@ -1402,10 +1418,19 @@ body{
                     margin-bottom: 30px;
                     width:100%;
         }
+        
         .btn-manage{
-          border: 1px $data-color solid;
+          border: 2px $data-color solid;
           background-color: #ffffff;
           display:inline-block;
+          color: #333333;
+          &.auto{
+            border-color: #f0ad4e ;
+            float: none;
+          }
+          &.delete{
+            border-color: #ac2925 ;
+          }
         }
         .btn-group-main{
             background-color: #ffffff;
@@ -1430,8 +1455,8 @@ body{
                   border-bottom-color:#ffffff;
                   border-right-width: 6px;
                   border-left-width: 6px;
-                  border-top-width: 12px;
-                  padding-bottom: 4px;
+                  border-top-width: 8px;
+                  padding-bottom: 7px;
               }
           }
         }
@@ -1459,6 +1484,17 @@ body{
             background-color: #ffffff;
         }
     }
+    .social-icons{
+      width:33%;
+      margin-top:10px;
+      padding-left:10px;
+      float:left;
+      font-size: 1.8rem;
+    }
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
+    margin-top:2px;
   }
 }
 
