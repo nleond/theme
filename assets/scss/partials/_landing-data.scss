@@ -11,13 +11,17 @@ body{
             line-height: 1.4;
             padding-top: 14px;
             
+            
             select{
               font-weight: 400;
               font-size: 1.4rem;
               margin-left: 15px;
               background-color: $neutral-grey;
               border-radius: 5px;
+              border-color: $data-color; 
               color: #000;
+              outline:none;
+              box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
             }
             &:after{
                 content: '';

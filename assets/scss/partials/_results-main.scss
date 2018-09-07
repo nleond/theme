@@ -138,16 +138,18 @@ body{
       margin: auto;
       padding-top: 200px;
       min-height: 1550px;
+      overflow:auto;
       
       section.results-main-sidebar{
         
         padding: 0 ;
         width: 270px;
         max-width: 320px;
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
-        margin-top: 202px;
+        margin-top: 2px;
+        float:left;
         z-index: 2;
 
         .search-form-wrapper{
@@ -651,6 +653,7 @@ body{
           .title{
             margin-left: 13px;
             margin-bottom: 25px;
+            text-transform: uppercase;
           }
           
           .switches{
@@ -668,7 +671,7 @@ body{
               color: $details-grey;
               letter-spacing: .05em;
               line-height: 1.5;
-              
+              text-transform: uppercase;
               input{
                 
                 position: relative;
@@ -804,7 +807,7 @@ body{
           margin-bottom: 16px;
           position: relative;
           height: 15px;
-          
+
           &.top{
             margin-bottom: 15px;
             padding-left: 8px;
@@ -815,7 +818,6 @@ body{
             padding-left: 8px;
             
             .breadcrumbs{
-              
               top: 3px;
             }
           }
@@ -827,6 +829,7 @@ body{
             top: 1px;
             left: 0;
             margin-left: 8px;
+            text-transform: uppercase;
             
             .breadcrumbs-part{
               
@@ -955,14 +958,13 @@ body{
           .order-by{
             // position: absolute;
             // right: 0;
-
             // top: 0;
             font-weight: 400;
             font-size: 12px;
             color: $main-black;
             letter-spacing: .025em;
             line-height: 1.4;
-            padding-top: 10px;
+            padding-top: 10px; 
             
             select{
               font-weight: 400;
@@ -1124,13 +1126,14 @@ body{
               font-weight: 500;
               
               .dataset-private{
-                padding: 5px !important;
+                padding: 3px !important;
                 font-size: 1.4rem;
+                float:left;
+                margin-top:2px;
               }
               a{
                 
                 color: inherit;
-                display: inline-block;
                 
                 &:hover{
                   color: inherit;
@@ -1172,6 +1175,7 @@ body{
               
               a{
                 color: inherit;
+                text-transform: uppercase;
                 
                 &:hover{
                   color: inherit;
@@ -1205,21 +1209,25 @@ body{
             .btn-favorite{
                 float:right;
                 margin-top:17px;
-                padding-right:11px;
+                margin-right:11px;
                 display:none;
+                a{
+                  display:block;
+                }
                 &:hover{
                   img{
                     opacity: .6;
                   }
                 }
-                
             }
             .btn-save{
                 float:right;
                 margin-top:16px;
-                padding-right:17px;
+                margin-right:17px;
                 display:none;
-                
+                a{
+                  display:block;
+                }
                 &:hover{
                   img{
                     opacity: .6;
@@ -1245,6 +1253,7 @@ body{
                 float:left;
                 width:100%;
                 padding-left:25px;
+                margin-top:10px;
                 .package-title{
                     color: $data-color;
                     margin-bottom:10px;
@@ -1268,7 +1277,9 @@ body{
                 }
                 li {
                     float:left;
-                    padding: 20px 35px 15px 25px;
+                    //padding: 20px 20px 15px 20px;
+                    padding: 20px 1px 10px;
+                    width:25%;
                     text-transform: uppercase;
                     a{
                         color: #666666;
@@ -1300,6 +1311,10 @@ body{
                     color: #b2b2b2;
                   }
                 }
+            .nav-menu{
+              text-align: center;
+            }    
+
             .nav-menu-other{
               padding-top: 50px;
             }    
@@ -1318,9 +1333,10 @@ body{
                 }
                 .resource-component{
                   position: relative;
-                  padding: 10px 10px 10px 60px;
+                  padding: 10px 0 10px 60px;
                   margin-bottom: 0px;
                   border-radius: 3px;
+                  max-height: 80px;
 
                   .format-label{
                     background-repeat: no-repeat;
@@ -1410,6 +1426,18 @@ body{
               }
 
           }
+          .content_action{
+            //display:inline-block;
+          }
+          
+          form{
+            display:inline-block;
+            width:100%;
+          }
+          .resource-view-list{
+            display:inline-block;
+            width:100%;
+          }
         }
         
         .separator{
@@ -1431,6 +1459,11 @@ body{
           &.delete{
             border-color: #ac2925 ;
           }
+        }
+        .btn-new-view{
+          position:absolute;
+          right:0;
+          margin-top: -50px;
         }
         .btn-group-main{
             background-color: #ffffff;
@@ -1474,6 +1507,9 @@ body{
       }
       .dashboard{
         padding-left: 0px !important; 
+      }
+      .error-message{
+        margin-top: 200px;
       }
     }
     .actions {
