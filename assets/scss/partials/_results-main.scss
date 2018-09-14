@@ -701,6 +701,12 @@ body{
           .map-container img{
             width: 100%;
           }
+
+          &.organizations{
+            .switches{
+              //text-transform: uppercase;
+            }
+          }
         }
         
         &.about-helix-container{
