@@ -94,12 +94,6 @@ body {
         margin: 315px 0 0 185px;
         width: 94.8rem;
         min-width: 400px; //@include position(absolute, 56% null null 50%);
-        // @include transform(translate(-50%, -50%)));
-        /*transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);*/
         .landing-search-form {
           .main-form-content {
             width: calc(100% - 167px);
@@ -489,10 +483,15 @@ body {
     }
     .modal{padding-right: 0px !important;} //to fix auto-adding of padding-right
 
+    .modal-dialog-centered{
+      min-height: calc(100% - (1.75rem * 2));
+    }
+
     .modal-dialog {
       width: 80vw;
-      max-width: 80vw;
-      margin-top: 82px;
+      max-width: 1000px;
+      margin-top: 26px;
+      height: 80vh;
       .modal-content {
         position: relative;
         display: flex;
@@ -511,22 +510,32 @@ body {
         .modal-body{
           position: relative;
           flex: 1 1 auto;
-          padding: 1rem;
+          padding: 1.4rem;
         }
         .advanced-search {
           .row{
-            padding-top: 7px;
+            
+            .title{
+              padding: 0.7rem 0 1.4rem 0;
+            }
           }
-          .title{
-            float:left;
-            line-height: 1.35;
-            letter-spacing: .02em;
+          //for vertical alignment
+          .row.display-flex {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .row.display-flex > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
           }
           .btn {
             cursor: pointer;
+            text-align: right !important;
           }
           input.search-text {
+            margin-bottom: 40px;
             border: none;
+            outline: none;
             background-color: transparent;
             font-size: 20px;
             width: 80%;
@@ -551,7 +560,7 @@ body {
           }
           .param-box {
             margin-top: 35px;
-            max-height: 312px;
+            max-height: 330px;
             overflow-y: auto;
             .title {
               margin-left: 13px;
@@ -598,7 +607,7 @@ body {
             }
           }
           section.footer {
-            padding: 2rem;
+            padding: 2.8rem;
             button.landing-search-button {
               color: white;
               background-color: $main-black;
