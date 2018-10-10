@@ -1280,7 +1280,7 @@ body{
                     color: $data-color;
                     margin-bottom:10px;
                     font-weight:300;
-                    width: 75%;  //for distance from fav save buttons
+                    //width: 75%;  //for distance from fav save buttons
                 }
                 .dataset-dates{
                     margin-bottom:30px;
@@ -1317,6 +1317,7 @@ body{
                 }
                 .btn-favorite{
                   float:right;
+                  margin-left:15px;
                 }
                 .btn-save{
                   float:right;
@@ -1528,6 +1529,9 @@ body{
             .object-read-widget{
                 padding-left:25px;
             }    
+        }
+        .resource-description{
+          font-size:1.6rem;
         }
       }
       .dashboard{
