@@ -141,7 +141,10 @@ body{
               &:hover > ul{
                   left:auto;
                   display: block;
-                  li > a {color:#fff;}
+                  li > a {
+                    color:#fff;
+                    display:block;
+                  }
               }
               
             }

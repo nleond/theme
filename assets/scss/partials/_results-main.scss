@@ -1016,7 +1016,6 @@ body{
           
           padding-bottom: 40px;
           
-          
           .result-item{
             max-width: 1024px;
             margin: auto;
@@ -1281,6 +1280,16 @@ body{
                     margin-bottom:10px;
                     font-weight:300;
                     //width: 75%;  //for distance from fav save buttons
+                    .draft-state{
+                      //border: 2px $data-color solid;
+                      border-radius: 8px;
+                      font-size: 1.4rem;
+                      font-weight: 600;
+                      padding: 10px;
+                      background: $data-color;
+                      color: #fff;
+                      vertical-align: middle;
+                    }
                 }
                 .dataset-dates{
                     margin-bottom:30px;
@@ -1347,7 +1356,8 @@ body{
                 margin-top: 20px;
                 margin-bottom: 30px;
                 font-weight: 300;
-                line-height: 30px;
+                line-height: 23px;
+                font-size: 1.5rem;
           }
           .package-resources{
                 list-style: none;
@@ -1364,10 +1374,10 @@ body{
                   .format-label{
                     background-repeat: no-repeat;
                     background-position: 0px 0px;
-                    background-size: 100%;
+                    background-size: 62%;
                     position: absolute;
                     width: 50px;
-                    height: 48px;
+                    height: 42px;
                     top: 5px;
                     left: 5px;
                   }
@@ -1382,6 +1392,7 @@ body{
                     font-family: 'Roboto';
                     font-weight:300;
                     font-size: 1rem;
+                    line-height: 10px;
                     a{
                       color:#67676A;
                     }
@@ -1391,6 +1402,7 @@ body{
                   font-size: 2.5rem;
                   color: $data-color;
                   font-weight:400;
+                  line-height: 20px;
                 }
                 &.edit{
                   display:inline-block;
