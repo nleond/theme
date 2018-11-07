@@ -170,7 +170,7 @@ body {
 
             .main-form-content {
 
-              width: calc(100% - 57px);
+              width: calc(100% - 41px);
               border-bottom: solid 3px black;
               position: relative;
 
@@ -574,7 +574,7 @@ body {
               top: 50%;
               width: 50px;
               transform: translateY(-50%);
-              right: 0;
+              right: -8px;
               opacity: 1;
               margin-top: 2px;
 
@@ -1380,8 +1380,9 @@ body {
               margin-top: 5px;
               margin-left: 20px;
               margin-right: 10px;
-
+              
               a {
+                cursor: default;
                 font-size: 1.8rem;
                 color: #b2b2b2;
               }
@@ -1564,6 +1565,11 @@ body {
           &.delete {
             border-color: #ac2925;
           }
+
+          &.black {
+            margin-top: 10px;
+            border-color: #333;
+          }
         }
 
         .btn-new-view {
@@ -1690,6 +1696,88 @@ body {
     line-height: 25px;
   }
 
+  .select2-drop {
+    border:none;
+    background-color: #f1f1f1f1;
+    .select2-search{
+      padding-left: 0;
+      padding-right:0;
+    }
+    .select2-results {
+      border-radius: 0;
+      border: 2px solid #252525;
+      background-color: #f1f1f1f1 !important;
+      box-shadow: none;
+    }
+    input {
+      border: 2px solid #252525;
+      border-radius: 0 !important;
+      background-color: #f1f1f1f1 !important;
+      box-shadow: none;
+      background: url(../images/png/select2.png) no-repeat 100% -22px, linear-gradient(to bottom, #f1f1f1f1 85%, #f1f1f1f1 99%) 0 0 !important;
+    }
+  }
+
+  .controls {
+
+
+    input {
+      border-width: 0 0 2px 0 !important;
+      border-radius: 0 !important;
+      border-bottom-color: #252525 !important;
+      background-color: #f1f1f1f1 !important;
+      box-shadow: none;
+    }
+
+
+    textarea,
+    .select2-container,
+    .select-field {
+      border-radius: 0;
+      border: 2px solid #252525;
+      background-color: #f1f1f1f1 !important;
+      box-shadow: none;
+
+      a {
+        background-color: #f1f1f1f1 !important;
+      }
+
+      &#s2id_field-closed_tag,
+      &#s2id_field-tags {
+        border-width: 0 0 2px 0 !important;
+      }
+
+      .select2-choices {
+        background-color: #f1f1f1f1 !important;
+        border: none;
+        box-shadow: none;
+      }
+
+      .select2-arrow {
+        border: none !important;
+        background-color: #f1f1f1f1 !important;
+        background-image:
+          linear-gradient(45deg, transparent 50%, black 50%),
+          linear-gradient(135deg, black 50%, transparent 50%),
+          linear-gradient(to right, #ccc, #ccc) !important;
+        background-position:
+          calc(100% - 9px) calc(1em + 2px),
+          calc(100% - 5px) calc(1em + 2px),
+          calc(100% - 2.5em) 0.5em !important;
+        background-size:
+          5px 5px,
+          5px 5px,
+          1px 1.5em !important;
+        background-repeat: no-repeat !important;
+
+        b {
+          display: none !important;
+        }
+      }
+
+    }
+  }
+
   .dataset-form {
 
     .image-upload {
@@ -1719,60 +1807,7 @@ body {
       line-height: 20px;
     }
 
-    input {
-      border-width: 0 0 2px 0 !important;
-      border-radius: 0;
-      border-bottom-color: #252525;
-      background-color: #f1f1f1f1 !important;
-      box-shadow: none;
-    }
 
-    textarea,
-    .select2-container,
-    .select-field {
-      border-radius: 0;
-      border: 2px solid #252525;
-      background-color: #f1f1f1f1 !important;
-      box-shadow: none;
-
-      a {
-        background-color: #f1f1f1f1 !important;
-      }
-
-      &#s2id_field-closed_tag,
-      &#s2id_field-tags {
-        border-width: 0 0 2px 0 !important;
-      }
-
-      .select2-choices {
-        background-color: #f1f1f1f1 !important;
-        border: none;
-        box-shadow: none;
-      }
-
-      .select2-arrow {
-        border: none;
-        background-color: #f1f1f1f1 !important;
-        background-image:
-          linear-gradient(45deg, transparent 50%, black 50%),
-          linear-gradient(135deg, black 50%, transparent 50%),
-          linear-gradient(to right, #ccc, #ccc);
-        background-position:
-          calc(100% - 9px) calc(1em + 2px),
-          calc(100% - 5px) calc(1em + 2px),
-          calc(100% - 2.5em) 0.5em;
-        background-size:
-          5px 5px,
-          5px 5px,
-          1px 1.5em;
-        background-repeat: no-repeat;
-
-        b {
-          display: none;
-        }
-      }
-
-    }
 
     .spacing {
       margin-bottom: 70px;
@@ -1793,6 +1828,7 @@ body {
       width: 100%;
       margin: 0 auto;
       margin-bottom: 80px;
+      margin-left: 45px;
 
       .step {
         display: table-cell;
@@ -1915,6 +1951,26 @@ body {
         text-align: center;
         background: $data-color;
       }
+    }
+
+    .help-block {
+      margin-bottom: 12px;
+      margin-top: 12px;
+      font-size: 1.3rem;
+    }
+
+    hr {
+      margin: 20px 0 50px 16px !important;
+    }
+    .disclaimer{
+      margin-top:20px;
+      font-weight: 300;
+      font-size:13px;
+      text-align: left;
+    }
+    .control-required-message{
+      float:left;
+      margin:15px 0 0 0;
     }
   }
 }
