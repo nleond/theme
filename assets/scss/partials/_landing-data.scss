@@ -70,7 +70,7 @@ body{
       
       &.featured-datasets-container{
         
-        max-width: 1286px;
+        max-width: 1366px;
         padding-top: 50px;
         
         h4.featured-datasets-header{
@@ -103,7 +103,7 @@ body{
         font-weight: 400;
         font-size: 1.2rem;
         letter-spacing: .05;
-        line-height: 1.3;
+        line-height: 16px;
         
         a{
           color: inherit;
@@ -122,8 +122,9 @@ body{
       
       h3.featured-dataset-title{
         
-        margin: 16px 0;
+        margin: 10px 0;
         line-height: 36px;
+        font-size: 30px;
         font-weight: 400;
         color: $data-color;
         
@@ -145,7 +146,7 @@ body{
         font-size: 1.2rem;
         color: #707070;
         letter-spacing: .05em;
-        line-height: 1.3;
+        line-height: 16px;
         text-transform: uppercase;
 
         a{
@@ -164,7 +165,7 @@ body{
     
     .latest-datasets-container{
       
-      max-width: 1286px;
+      max-width: 1024px;
       padding-top: 65px;
       
       h4.latest-datasets-header{

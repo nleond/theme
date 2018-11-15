@@ -764,8 +764,19 @@ body {
           }
         }
 
-        .org-content {
-          padding: 30px 30px 30px 30px;
+        .side-content {
+          padding: 25px 30px 30px 30px;
+        }
+
+        .license {
+          padding: 20px 30px 30px 15px;
+
+          a {
+            font-family: 'Roboto';
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #67676A;
+          }
         }
 
         .side-tags {
@@ -952,6 +963,14 @@ body {
             .btn-add-dataset-toggle {
               padding-left: 7px;
               padding-right: 7px;
+            }
+
+            .dropdown-menu {
+              border: 2px solid $data-color;
+              border-radius: 0px;
+              font-size: 12px;
+              font-weight: 500;
+              //li{ a{color: $data-color;} }
             }
           }
 
@@ -1367,7 +1386,7 @@ body {
               float: left;
               //padding: 20px 20px 15px 20px;
               padding: 20px 1px 10px;
-              width: 25%;
+              width: 33%;
               text-transform: uppercase;
 
               a {
@@ -1391,11 +1410,19 @@ body {
             .btn-favorite {
               float: right;
               margin-left: 15px;
+
+              a {
+                display: inline-block;
+              }
             }
 
             .btn-save {
               float: right;
               margin-left: 15px;
+
+              a {
+                display: inline-block;
+              }
             }
 
             .package-language {
@@ -1414,6 +1441,10 @@ body {
 
             .nav-menu {
               text-align: center;
+
+              a {
+                text-decoration: none;
+              }
             }
 
             .nav-menu-other {
@@ -1467,8 +1498,9 @@ body {
               .description {
                 font-family: 'Roboto';
                 font-weight: 300;
-                font-size: 1rem;
-                line-height: 10px;
+                font-size: 1.1rem;
+                line-height: 12px;
+                width: 60%;
 
                 a {
                   color: #67676A;
@@ -1644,6 +1676,38 @@ body {
           .object-read-widget {
             padding-left: 25px;
           }
+
+          tbody {
+            color: #666666;
+            font-size: 12px;
+            tr {
+              th {
+                border: 1px solid #666666;
+                text-transform: uppercase;
+
+                &:first-child {
+                  font-weight: 700;
+                }
+                font-weight: 400;
+              }
+
+              td {
+                border: 1px solid #666666;
+                font-weight: 400;
+                line-height: 18px;
+              }
+            }
+          }
+        }
+
+        .toggle-show-more {
+          height: 34px;
+          font-size: 12px;
+          border-radius: 0;
+          background: #3EA0DD !important;
+          text-transform: uppercase;
+          a{color: #fff;}
+          
         }
 
         .resource-description {
@@ -1750,21 +1814,39 @@ body {
       background-color: #f1f1f1f1 !important;
       box-shadow: none;
       font-size: 17px !important;
-      &::-webkit-input-placeholder { font-weight:300; color:#707070}
-      &::-moz-placeholder{font-weight:300; color:#707070}
+
+      &::-webkit-input-placeholder {
+        font-weight: 300;
+        color: #707070
+      }
+
+      &::-moz-placeholder {
+        font-weight: 300;
+        color: #707070
+      }
     }
 
     textarea,
     .select2-container,
-    .select-field, select {
+    .select-field,
+    select {
       border-radius: 0;
       border: 2px solid #252525;
       background-color: #f1f1f1f1 !important;
       box-shadow: none;
       width: 100% !important;
       font-size: 17px;
-      &::-webkit-input-placeholder { font-weight:300; color:#707070}
-      &::-moz-placeholder{font-weight:300; color:#707070}
+
+      &::-webkit-input-placeholder {
+        font-weight: 300;
+        color: #707070
+      }
+
+      &::-moz-placeholder {
+        font-weight: 300;
+        color: #707070
+      }
+
       a {
         background-color: #f1f1f1f1 !important;
       }
@@ -1834,10 +1916,11 @@ body {
       line-height: 20px;
       margin-bottom: 6px !important;
       width: auto;
-      display:block;
-      text-align:left !important;
-      &:after{
-        content:none;
+      display: block;
+      text-align: left !important;
+
+      &:after {
+        content: none;
       }
     }
 
@@ -1874,7 +1957,8 @@ body {
           .circle {
             margin-left: 0;
           }
-          .step-title{
+
+          .step-title {
             margin-left: -30px;
             text-align: left;
           }
@@ -1894,7 +1978,8 @@ body {
           .circle {
             margin-right: 0;
           }
-          .step-title{
+
+          .step-title {
             text-align: right;
           }
         }
@@ -2005,12 +2090,12 @@ body {
         line-height: 30px;
         text-align: center;
         background: $data-color;
-        display:inline-block;
+        display: inline-block;
 
         &.delete {
           width: 190px;
           background: #ac2925;
-          
+
         }
 
         &.previous {
@@ -2030,48 +2115,53 @@ body {
           }
         }
       }
-      
+
     }
-    .btn-add-more{
+
+    .btn-add-more {
       border: 1px solid #262626;
-      float:left;
+      float: left;
       background: none;
       outline: inherit;
       font-size: 40px;
       font-weight: 300;
       line-height: 40px;
       padding: 0px 50px;
-      
-      margin-bottom:20px;
+
+      margin-bottom: 20px;
     }
+
     .help-block {
       margin-bottom: 12px;
       margin-top: 12px;
       font-size: 1.3rem;
-      font-weight:300;
-      a{
-        font-weight:600;
-        text-decoration: underline;
-        color:inherit;
+      font-weight: 300;
+
+      a {
+        font-weight: 600;
+        text-decoration: underline !important;
+        color: inherit;
       }
     }
 
-   
 
-    .disclaimer, .control-required-message {
-      margin: 20px 0 0 0 ;
+
+    .disclaimer,
+    .control-required-message {
+      margin: 20px 0 0 0;
       font-weight: 300;
       font-size: 13px;
       text-align: left;
-      float:left;
-      a{
-        font-weight:600;
-        text-decoration: underline;
-        color:inherit;
+      float: left;
+
+      a {
+        font-weight: 600;
+        text-decoration: underline !important;
+        color: inherit;
       }
     }
 
-    
+
     .form-separator {
       width: 105%;
       display: block;
@@ -2105,5 +2195,8 @@ body {
 
   .popover-followee {
     left: -74px !important;
+  }
+  a{
+    text-decoration: none !important;
   }
 }
