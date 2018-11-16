@@ -1508,12 +1508,7 @@ body {
               }
             }
 
-            .resource-title {
-              font-size: 2.5rem;
-              color: $data-color;
-              font-weight: 400;
-              line-height: 20px;
-            }
+
 
             &.edit {
               display: inline-block;
@@ -1671,16 +1666,21 @@ body {
             margin-top: 60px;
             padding-left: 25px;
             float: left;
+            text-transform: uppercase;
           }
 
-          .object-read-widget {
+          .object-read-widget,
+          .table-bordered {
             padding-left: 25px;
           }
 
           tbody {
             color: #666666;
             font-size: 12px;
+
             tr {
+              background-color: inherit;
+
               th {
                 border: 1px solid #666666;
                 text-transform: uppercase;
@@ -1688,6 +1688,7 @@ body {
                 &:first-child {
                   font-weight: 700;
                 }
+
                 font-weight: 400;
               }
 
@@ -1706,13 +1707,57 @@ body {
           border-radius: 0;
           background: #3EA0DD !important;
           text-transform: uppercase;
-          a{color: #fff;}
-          
+
+          a {
+            color: #fff;
+          }
+
         }
 
         .resource-description {
           font-size: 1.6rem;
         }
+
+        .module-resource {
+          border: none;
+
+          .resource-upper {
+            .resource-title {
+              color: #3EA0DD;
+              margin-bottom: 10px;
+              font-weight: 300;
+              font-size: 4rem;
+            }
+
+            .resource-url {
+              color: #000;
+              font-weight: 300;
+            }
+
+            .resource-description,
+            .notes {
+              display: inline-block;
+              margin-top: 20px;
+              margin-bottom: 30px;
+              font-weight: 300;
+              line-height: 24px;
+              font-size: 1.5rem;
+
+              h3 {
+                font-size: 2rem;
+                letter-spacing: normal;
+              }
+            }
+
+            .resource-view {
+              .ckanext-datapreview>iframe {
+                min-height: 755px;
+                border: 2px solid $data-color;
+              }
+            }
+          }
+        }
+
       }
 
       .dashboard {
@@ -1817,14 +1862,16 @@ body {
 
       &::-webkit-input-placeholder {
         font-weight: 300;
-        color: #707070
+        color: #707070;
       }
 
       &::-moz-placeholder {
         font-weight: 300;
-        color: #707070
+        color: #707070;
       }
     }
+
+
 
     textarea,
     .select2-container,
@@ -1837,14 +1884,19 @@ body {
       width: 100% !important;
       font-size: 17px;
 
-      &::-webkit-input-placeholder {
-        font-weight: 300;
-        color: #707070
+
+      &::-webkit-input-placeholder, .select2-default  {
+        font-weight: 300 !important;
+        color: #707070 !important;
       }
 
       &::-moz-placeholder {
         font-weight: 300;
-        color: #707070
+        color: #707070;
+      }
+
+      .select2-default {
+        
       }
 
       a {
@@ -1860,7 +1912,17 @@ body {
         background-color: #f1f1f1f1 !important;
         border: none;
         box-shadow: none;
+
+        .select2-search-choice {
+          font-size: 12px;
+          line-height: 16px;
+
+          a {
+            top: 7px;
+          }
+        }
       }
+
 
       .select2-arrow {
         border: none !important;
@@ -1883,11 +1945,11 @@ body {
           display: none !important;
         }
       }
-
     }
   }
 
   .dataset-form {
+
 
     .image-upload {
       //margin-top: 80px;
@@ -1924,7 +1986,9 @@ body {
       }
     }
 
-
+    .form-control, .select2-container{
+      height:40px;
+    }
 
     .spacing {
       margin-bottom: 70px;
@@ -1944,7 +2008,7 @@ body {
       display: table;
       width: 100%;
       margin: 0 auto;
-      margin-bottom: 80px;
+      //margin-bottom: 80px;
       //margin-left: 45px;
 
       .step {
@@ -2196,7 +2260,8 @@ body {
   .popover-followee {
     left: -74px !important;
   }
-  a{
+
+  a {
     text-decoration: none !important;
   }
 }

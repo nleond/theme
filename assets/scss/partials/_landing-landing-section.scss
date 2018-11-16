@@ -490,8 +490,8 @@ body {
 
     .modal-dialog {
       width: 80vw;
-      max-width: 1000px;
-      margin-top: 26px;
+      max-width: 1024px;
+      margin-top: 55px;
       height: 80vh;
       .modal-content {
         position: relative;
@@ -502,7 +502,7 @@ body {
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: .3rem;
+        border-radius: 0;
         outline: 0;
         .close{ 
           opacity:1;
@@ -515,9 +515,17 @@ body {
         }
         .advanced-search {
           .row{
-            
-            .title{
+            .modal-title{
+              font-size: 25px;
+              font-weight: 500;
               padding: 0.7rem 0 1.4rem 0;
+            }
+            .search-text{
+              font-size: 17px;
+              line-height: 20px;
+              font-weight: 300;
+              color: #707070;
+              padding-left: 13px;
             }
           }
           //for vertical alignment
