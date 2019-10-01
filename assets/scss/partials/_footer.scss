@@ -1,125 +1,132 @@
-body{
-  
-  
-  
-  footer#footer{
-    
-    &.main-footer{
-      
+body {
+
+
+
+  footer#footer {
+
+    &.main-footer {
+
       color: $footer-white;
       background-color: $main-black;
     }
-    
-    &.data-footer{
-      
+
+    &.data-footer {
+
       color: white;
       background-color: $data-color;
+      //background-color: #0e0e0e;
     }
-    
-    &.pubs-footer{
-      
+
+    &.pubs-footer {
+
       color: white;
       background-color: $pubs-color;
-    } 
-    
-    &.lab-footer{
-      
+    }
+
+    &.lab-footer {
+
       color: white;
       background-color: $lab-color;
     }
-    
-    .footer-content{
-      
+
+    .footer-content {
+
       width: 100%;
-      padding: 50px 50px 30px 58px;
+      padding: 30px 20px 10px 35px;
       //max-width: 1366px;
       display: block;
       margin: auto;
-      
-      .footer-column{
-        
+
+      .content {
+        margin-bottom: 20px;
+        flex-wrap: wrap !important;
+        display: flex !important;
+      }
+
+      .footer-column {
+
         vertical-align: top;
         display: inline-block;
-        
-        &.logo{
-          
+
+        &.logo {
+          padding-top: 40px;
           min-width: 368px;
-          
-          a{
-            
+          flex-grow: 1;
+
+          a {
             color: inherit;
-            
-            img{
-              
+
+            img {
               vertical-align: super;
-              width: 210px;
+              width: 150px;
             }
           }
         }
-        
-        &.about{
-          
-          min-width: 212px;
+
+        &.about {
+
+          min-width: 190px;
+          margin-bottom: 25px;
         }
-        
-        &.research{
-          
-          min-width: 212px;
+
+        &.research {
+
+          min-width: 190px;
         }
-        
-        &.partners{
-          
-          li{
-            
-            margin-top:30px;
-            margin-right:55px;
+
+        &.partners {
+
+          li {
+
+            margin-top: 30px;
+            margin-right: 55px;
             float: left;
-            
-            img{
-              
+
+            img {
+
               max-width: 200px;
             }
 
-            &:last-child{
-              margin-right:0px;
+            &:last-child {
+              margin-right: 0px;
             }
           }
         }
-        
-        h3.footer-column-title{
-          
+
+        h3.footer-column-title {
+
           font-weight: 500;
           font-size: 2.5rem;
           line-height: 1;
           letter-spacing: -.02em;
-          
+
           margin-bottom: 40px;
         }
-        
-        ul{
-          
+
+        ul {
+
           list-style-type: none;
           padding: 0;
-          
-          li{
-            
+
+          li {
+
             margin-bottom: 15px;
             font-weight: 300;
             font-size: 1.3rem;
             line-height: 1.3;
-            
-            
-            &:last-child{
-              
+
+
+            &:last-child {
+
               margin-bottom: none;
             }
-            
-            a{
-              
+
+            a {
+
               color: inherit;
-              
-              &:hover{
-                
+
+              &:hover {
+
                 text-decoration: none;
               }
             }
@@ -127,13 +134,33 @@ body{
           }
         }
       }
-      
-      .copyright-notes{
-        
-        font-size: 1.2rem;
+
+      .copyright-notes {
+
+        margin-left: 30px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 1;
-        
+
+      }
+
+      .share-links {
+
+        margin-right: 250px;
+        margin-top: 10px;
+         i {
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          margin: 2px;
+          padding: 5px 0 0 7px;
+          overflow: hidden;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+          transition: all 0.2s ease 0s;
+          font-size: 20px;
+          background-color: #fff;
+          
+        }
       }
     }
   }
