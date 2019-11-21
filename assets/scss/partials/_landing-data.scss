@@ -12,7 +12,6 @@ body {
         letter-spacing: .025em;
         line-height: 1.4;
         padding-top: 14px;
-
         &:after {
           content: "";
         }
@@ -31,6 +30,7 @@ body {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        padding-right: 35px !important;
 
         option {
           color: #262626;

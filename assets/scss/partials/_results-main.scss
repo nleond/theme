@@ -943,6 +943,8 @@ body {
             margin-left: 8px;
             text-transform: uppercase;
 
+
+
             .breadcrumbs-part {
 
               font-weight: 400;
@@ -966,7 +968,7 @@ body {
                 margin-left: 5px;
                 margin-right: 3px;
                 position: relative;
-                top: -1px
+                top: -1px;
               }
 
               &:last-child {
@@ -992,6 +994,16 @@ body {
 
               &.hide-overflow {
                 display: none;
+              }
+
+              &.no-link {
+                &:hover {
+                  opacity: 1;
+
+                  &:after {
+                    opacity: 1;
+                  }
+                }
               }
             }
           }
@@ -1515,9 +1527,10 @@ body {
 
           }
 
-          .page-heading{
-            display:inline-block;
-            width:100%;
+          .page-heading {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
           }
 
           .package-notes {
@@ -1531,14 +1544,16 @@ body {
 
           .package-resources {
             list-style: none;
-            .empty{
+
+            .empty {
               //font-style: normal;
               font-size: 16px;
               font-weight: 300;
               margin-top: 20px;
               display: inline-block;
             }
-            .contact{
+
+            .contact {
               float: right;
             }
 
@@ -1679,13 +1694,25 @@ body {
             }
 
           }
+
+          //hierarcy orgs font
+          .hierarchy-tree-top {
+            font-size: 15px;
+
+            li a {
+              color: #337ab7;
+            }
+          }
+
         }
 
         .empty {
           color: #555;
-          //margin-top: 100px;
+          margin-top: 30px;
           font-weight: 400;
           font-size: 15px;
+          display: inline-block;
+          width: 100%;
         }
 
         .separator {
@@ -1852,6 +1879,16 @@ body {
         .activity {
           font-weight: 400;
         }
+
+        .hierarchy-tree-top {
+          list-style: none;
+
+          a {
+            font-size: 18px;
+            color: #337ab7;
+            text-transform: uppercase;
+          }
+        }
       }
 
       .error-message {
@@ -1867,13 +1904,23 @@ body {
         color: #666666;
         font-size: 17px;
 
+        &.orcid {
+
+          background-image: url('../../images/png/orcid.png');
+          background-repeat: no-repeat;
+          background-size: 60px;
+          background-position-x: -10px;
+          padding-left: 40px !important;
+        }
+
         &.dataset {
           margin-top: 35px;
         }
 
-        &.right-spacing{
+        &.right-spacing {
           margin-right: 15px;
         }
+
         &.auto {
           border-color: #f0ad4e;
           float: none;
@@ -2066,7 +2113,8 @@ body {
     }
   }
 
-  .dataset-form, .form-horizontal {
+  .dataset-form,
+  .form-horizontal {
 
 
     .image-upload {
@@ -2371,6 +2419,10 @@ body {
       font-weight: 400;
     }
 
+    .control-label{
+      font-size: 13px;
+    }
+
   }
 
   .threesteps {
@@ -2441,45 +2493,93 @@ body {
     -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.7);
 
-    #favorite-text{
+    #favorite-text {
       margin-top: 15px;
     }
   }
+
+  #modal-request {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    width: 500px;
+    position: fixed;
+    top: 35%;
+    left: 40%;
+    display: none;
+    background: #FFF;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid $data-color;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.7);
+
+    .modal-heading{
+      text-align: left;
+      padding: 16px 30px;
+      width: 100%;
+      border-bottom: 2px solid $data-color;
+    }
+    .modal-body{
+      text-align: left;
+      padding: 30px;
+      p{
+        font-size: 17px;
+      }
+    }
+    label{
+      float: left;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    #result-text {
+      margin: 15px 0 0 0;
+    }
+  }
+
+
 
   .upper {
     text-transform: uppercase;
   }
 
-  #source-new{
-    .control-label{
-      width:auto;
+  #source-new {
+    .control-label {
+      width: auto;
     }
-    .controls{
-      margin-left:0px;
+
+    .controls {
+      margin-left: 0px;
     }
 
   }
 
-  .terms{
+  .terms {
     margin-left: 8px;
   }
 
   //For harvest admin 
 
-  .prose{
-    .content_action.btn-group{
-      float:right;
+  .prose {
+    .content_action.btn-group {
+      float: right;
       margin: 15px 0 30px !important;
     }
 
-    .module-content{
-      display:inline-block;
+    .module-content {
+      display: inline-block;
     }
   }
 
-  .profile-info{
-    .empty{
-      margin-top:30px;
+  .profile-info {
+    .empty {
+      margin-top: 30px;
     }
   }
 

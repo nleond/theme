@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 			},
 			js: {
 				files: ['assets/js/theme.js'],
-				tasks: ['jshint', 'uglify'],
+				tasks: ['jshint'],
 				options: {
 					livereload: true
 				}
@@ -26,21 +26,6 @@ module.exports = function (grunt) {
 				files: ['**/*.php'],
 				options: {
 					livereload: true
-				}
-			}
-		},
-
-		// concat and minify our JS
-		uglify: {
-			dist: {
-				files: {
-					'assets/js/vendors.min.js': [
-						'node_modules/fastclick/lib/fastclick.js',
-					],
-					'assets/js/theme.min.js': [
-						'assets/js/theme.js',
-						'node_modules/bootstrap/dist/js/bootstrap.min.js',
-					]
 				}
 			}
 		},
@@ -84,7 +69,7 @@ module.exports = function (grunt) {
 			},
 			helix_target: {
 				files: {
-					'../extensions/ckanext-helixtheme/ckanext/helixtheme/public/css/theme.css': [
+					'../public/css/theme.css': [
 						'assets/css/bootstrap.min.css',
 						'assets/css/bootstrap.min.css.map',
 						'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css',
@@ -129,8 +114,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		'jshint',
 		'sass',
-		'cssmin',
-		'uglify'
+		'cssmin'
 	]);
 
 };
